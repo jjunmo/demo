@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    hikari:
+      username: boot
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      jdbc-url: jdbc:log4jdbc:mysql://localhost:3306/bootboard?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Seoul
+      connection-test-query: select 1
+      password: boot1234
+  jpa:
+    generate-ddl: 'true'
+    database: mysql
+    hibernate:
+      use-new-id-generator-mappings: 'false'
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
